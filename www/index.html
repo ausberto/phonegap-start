@@ -3,9 +3,18 @@
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
     <title>Feliz cumple Isabelita</title>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+   <script type="text/javascript" charset="utf-8">
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+		}
+		function vibrate() {
+			navigator.notification.vibrate(7000);
+		}
+   </script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <!--[if lt IE 9]><script src="canvas/excanvas.js"></script><![endif]-->
-    <script type="text/javascript" src="js/fireworks.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/fireworks.js"></script>
     <link type="text/css" href="css/fireworks.css" rel="stylesheet">
 </head>
 <body>

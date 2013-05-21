@@ -9,11 +9,12 @@
     <author href="http://realaus.net" email="ausberto7@hotmail.com">Ausberto</author>
 	
 	<feature name="http://api.phonegap.com/1.0/device" />
+	<feature name="http://api.phonegap.com/1.0/notification" />
 
     <!--If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.-->
-    <preference name="permissions"                value="none"/>
+    <!--<preference name="permissions"                value="none"/>-->
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version" 		value="2.5.0" />          <!-- all: current version of PhoneGap -->
@@ -31,6 +32,7 @@
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-minSdkVersion"      value="7" />             <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+	<preference name="splash-screen-duration" 	value="3000" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />

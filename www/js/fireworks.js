@@ -35,12 +35,12 @@ var items = Array(
 	'Mi amor hoy es un día muy especial para agradecerle a dios por la fortuna de tenerte conmigo.',
 	'Con cada año que pasa, te haces más hermosa, y mi amor se hace mas grande.',
 	'Doy gracias a dios porque permitió que un día como hoy naciera una de las mas bellas flores.',
-	'Para la persona que llena todo mi corazón en este día. Feliz Cumple.',
+	'Para la persona que llena todo mi corazón en este día. Feliz Cumple Isabelita.',
 	'Un día como hoy naciste para la dicha de quienes te queremos y te amamos de verdad. Que dios y la virgen te llenen de bendiciones.',
 	'Es tan bonito compartir momentos especiales con alguien como tu. Feliz cumpleaños',
 	'El corazón que ama siempre será joven. Te deseo un año lleno de amor y alegría.',
 	'Solamente para ti, Isa, deseandole a una persona hermosa... un día hermoso.',
-	'Pensando en ti el día de tu cumpleaños, y deseándote mucha felicidad ',
+	'Pensando en ti el día de tu cumpleaños, y deseándote mucha felicidad.',
 	'Espero que tu cumpleaños sea tan divertido, que se convierta en un acontecimiento anual.',
 	'Feliz Cumpleaños. Que tus regalos hoy sean amor y felicidad.',
 	'Tu amor Isabelita es una prueba de que Dios me quiere.',
@@ -58,7 +58,7 @@ var items = Array(
 	'La distancia hace que el silencio no hable; con palabras que viven con tu voz y con el eco de tu risa.',
 	'En tu cumpleaños quiero recordar contigo momentos especiales, momentos llenos de alegría, es decir, cada segundo a tu lado.',
 	'Hay un día especial en el año, en que nos acordamos lo grandioso que es compartir contigo.',
-	'Que este año sea una perla mas en el collar de tus venturas.',
+	'Que este año sea una perla mas en el collar de tus aventuras y logros.',
 	'La mas hermosa de todas las rosas empieza a florecer, sus pétalos llenos de vida, llenos de amor. Son el símbolo de una linda mujer que cumple años hoy.',
 	'Para la mujercita mas bella y dulce de este mundo, rogando a dios le conceda muchos años mas de vida.',
 	'Que las sanas ilusiones de hoy se conviertan en realidad y que toda la dicha del mundo sea tuya hoy.',
@@ -73,14 +73,14 @@ var items = Array(
 	'No hay porque esconderse, solo es un año mas. Feliz Cumpleaños.',
 	'Un año más, un año menos: lo importante es que lo gocemos.',
 	'No pienses que te amo, porque en realidad te amo mas de lo que piensas.',
-	'Alguna vez fuiste a la luna... Porque yo voy a marte siempre....',
+	'Alguna vez fuiste a la luna?... Porque yo voy a marte siempre....',
 	'Si en la noche no puedes dormir, no cuentes estrellas...cuenta conmigo.',
 	'No desayuno por pensar en ti, No almuerzo por pensar en ti, No ceno por pensar en ti, No duermo porque tengo hambre.',
 	'Felicidad es una palabra de 9 letras, la mia resume en 2...TU, talvez 3... ISA',
 	'De todas las flores, la más bonita es la rosa y de todas las mujeres, tú eres la más hermosa.',
 	'¿Sabes por qué los ángeles están enfadado conmigo? Por que en vez de soñar con ellos sueño contigo.',
 	'Mi dulce paraíso, acúname en tu tierno amor con tu corazón de miel, elévame al cielo con tus besos, mi angel bella.',
-	'Si pudiera elegir un poder, elegiria el poder de estar siempre contigo.',
+	'Si pudiera elegir un poder, elegiria el poder de estar siempre contigo mi vida.',
 	'Empezaste como amiga, terminaste como amor, poco a poco así has robado todo mi corazón.',
 	'Cuando mires las estrellas acuérdate de mí, por que en cada una de ellas hay un beso para ti.',
 	'Dormire temprano, para soñar mas tiempo contigo mi cabeza de bombon.',
@@ -118,6 +118,7 @@ $(document).ready(function(){
     var params = location.search;
     var message = "";
     FireworkDisplay.launchText();
+	vibrate();
 });
 
 FireworkDisplay = {
@@ -322,7 +323,7 @@ Firework = function(index) {
     this.y = 0;
     this.status = FireworkDisplay.FIREWORK_READY;
     this.brightness = 255;
-    this.r = 1;
+    this.r = 9;
     this.g = 1;
     this.b = 1;
     this.start = {x:0, y:0};
