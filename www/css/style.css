@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Allura';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Allura'), local('Allura-Regular'), url(http://themes.googleusercontent.com/static/fonts/allura/v1/ExiT4hKozv4E-LiOi2vvJA.woff) format('woff');
+}
+
+* {margin:0; padding:0; border:0; outline:none}
+
+body {
+    color:#FFFFFF;
+	font-family:Segoe UI,Tahoma,Verdana,Arial,sans-serif;
+	background: url("../images/img02.jpg") repeat-x scroll left top transparent;
+	background-color:#B6D6E5;
+}
+#header{
+    text-align: left;
+    height: 235px;
+}
+#container{
+    width: 1000px;
+    margin: 0 auto;
+	background: url("../images/img03.jpg") no-repeat;
+}
+#header_bot{
+    background-color:#FFFFFF;
+	color:#000;
+	text-align: center;
+	font-size:40px;
+	background: url("../images/img04.jpg") repeat-x scroll left top;
+	width:1000px;
+	height:60px;
+	display:inline-block;
+}
+#mas_mensajes{
+	padding-top:110px;
+	margin-left: 415px;
+}
+#likebuttons{
+	height:80px;
+}
+.nube_texto{
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#097AB4;
+}
+.fb-comments{
+	margin-top:20px;
+}
+#content{
+    background-color:#FFFFFF;
+	color:#000;
+	text-align: center;
+	font-size:30px;
+	padding-left:20px;
+	padding-right:20px;
+	display:inline-block;
+	font-family: 'Oregano', Segoe UI,Tahoma,Verdana,Arial,sans-serif;
+	font-size:45px;
+}
+#loading{
+	width:960px;
+	height:100px;
+	padding-top:40px;
+	text-align:center;
+	display:inline-block;
+}
+#msg_n{
+	float:left;
+	background-color:#FFFFFF;
+	width:419px;
+	padding-right:5px;
+}
+#img_n{
+	float:left;
+	background-color:#FFFFFF;
+	width:520px;
+	overflow:hidden;
+	border:8px groove #0C83BD;
+}
+#footer {
+    margin: 0 auto;
+	background: url("../images/img15.jpg") repeat-x scroll left top transparent;
+	width:1000px;
+	height:210px;
+	display:inline-block;
+}
+#footer  #madeby{
+	float:right;
+	padding-top:40px;
+	padding-right:40px;
+}
+
+#latido{
+	-moz-animation:5s latido infinite;
+	margin:0 auto;
+	float:left;
+	width:300px;
+	height:220px;
+	margin-top:10px;
+	cursor:pointer;
+	background: url("../images/corazon.png") repeat-x left top;
+}
+#nombre{
+	color:white;
+	font-family: 'Allura', cursive;
+	font-size:70px;
+	padding-top:60px;
+	padding-left:75px;
+}
+
+@keyframes latido{
+   0%{transform:scale(1)}
+   47%{transform:scale(1)}
+   48%{transform:scale(.9)}
+   50%{transform:scale(1.1)}
+   52%{transform:scale(.9)}
+   54%{transform:scale(1)}
+}
