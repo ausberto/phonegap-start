@@ -1,14 +1,18 @@
+@font-face {
+	font-family: 'Codystar';
+	src: url('Codystar-Regular.ttf');
+}
 body {
     background: #080705;
     font-size:62.5%;
 	background:url(../images/lapaz2.jpg) repeat-x;
 }
-html, body { overflow: hidden; }
+/*html, body { overflow: hidden; }*/
 #form {
    position:relative;
    margin-left:auto;
    margin-right:auto;
-   width:870px;
+   width:300px;
    padding:16px;
    border:#3C75BA;
    text-align:center;
@@ -17,33 +21,9 @@ html, body { overflow: hidden; }
 #mismensajes{
 	font-family: 'Codystar', cursive;
 	font-weight: bold;
-	font-size:50px;
+	font-size:18px;
 	color:#fff;
 	cursor:pointer;
-}
-#message {
-    font-family:verdana, sans serif;
-    color:#EEE;
-    position:absolute;
-    left:0;
-    bottom:10px;
-    width:100%;
-    text-align:right;
-    padding-right:10px;
-}
-#message a {
-    color:#EEE;
-    padding-right:10px;
-}
-#message a:hover {
-    color:#00f;
-}
-.boxtext {
-    margin:10px 3px;
-    padding:8px;
-    color:white;
-    font-weight:bold;
-    font-family:arial;
 }
 #ad {
     font-family:verdana, sans serif;

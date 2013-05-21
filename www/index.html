@@ -7,19 +7,16 @@
     <!--[if lt IE 9]><script src="canvas/excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="js/fireworks.js"></script>
     <link type="text/css" href="css/fireworks.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <h1>JavaScript Fireworks</h1>
-    <script type="text/javascript">
-        //document.write('<div style="background:url(images/lapaz2.jpg) repeat-x;position:absolute;left:0;top:'+($(window).height()-193)+'px;width:100%;height:300px;"></div>');
-        document.write('<canvas id="cv" width="'+$(window).width()+'" height="'+($(window).height()-100)+'" style="position:absolute;left:0;top:0;"></canvas>');
-    </script>
-	<input id="firetext" value="PARA MI QUERIDISIMA ISABELITA" type="hidden">
+	<audio autoplay loop>
+		<source src="konayuki.ogg">
+		<source src="konayuki.mp3">
+	</audio>
+    <canvas id="cv" width="320" height="240" style="position:absolute;"></canvas>
     <div style="display: block;" id="form">
-		<div id="mismensajes">
-			No pienses que te amo, porque en realidad te amo mas de lo que piensas.
-		</div>
+		<div id="mismensajes"></div>
     </div>
 </body>
 </html>

@@ -32,8 +32,6 @@ var items = Array(
 	'Cada año que paso contigo me sabe a solo unos minutos, me gustaría vivir eternamente, respirar tu aire, sentir tu pulso y tu corazón mil siglos más.',
 	'Te deseo que tu día de cumpleaños me tengas tan presente como te he tenido en mi corazón cada segundo, cada instante.',
 	'Un amor que continua abriéndose paso en la dificultades se alimenta para toda la vida.. ¡Feliz cumpleaños!',
-	'Cada año que pasa más me seduces, cada año que cumples más me atraes. Eres tan eterna como tu sonrisa y tus ganas de vivir.',
-	'Cada año que paso contigo me sabe a solo unos minutos... Me gustaría vivir eternamente, respirar tu aire y sentir tu pulso y tu corazón mil siglos más.',
 	'Mi amor hoy es un día muy especial para agradecerle a dios por la fortuna de tenerte conmigo.',
 	'Con cada año que pasa, te haces más hermosa, y mi amor se hace mas grande.',
 	'Doy gracias a dios porque permitió que un día como hoy naciera una de las mas bellas flores.',
@@ -41,11 +39,11 @@ var items = Array(
 	'Un día como hoy naciste para la dicha de quienes te queremos y te amamos de verdad. Que dios y la virgen te llenen de bendiciones.',
 	'Es tan bonito compartir momentos especiales con alguien como tu. Feliz cumpleaños',
 	'El corazón que ama siempre será joven. Te deseo un año lleno de amor y alegría.',
-	'Solamente para ti. Deseandole a una persona hermosa... un día hermoso.',
+	'Solamente para ti, Isa, deseandole a una persona hermosa... un día hermoso.',
 	'Pensando en ti el día de tu cumpleaños, y deseándote mucha felicidad ',
-	'Espero que tu cumpleaños sea tan divertido, que se convierta en un acontecimiento anual! ',
+	'Espero que tu cumpleaños sea tan divertido, que se convierta en un acontecimiento anual.',
 	'Feliz Cumpleaños. Que tus regalos hoy sean amor y felicidad.',
-	'Tu amor es una prueba de que Dios me quiere.',
+	'Tu amor Isabelita es una prueba de que Dios me quiere.',
 	'Aprovechamos esta fecha tan especial para expresarte de todo corazón el gran cariño y admiración que sentemos hacia ti.',
 	'Hoy es un día muy especial para manifestarte un deseo, que tu vida sea premiada con mucha felicidad y que tus cumpleaños sean maravillosos.',
 	'Cada cumpleaños es un año más de juventud cuando se tiene un corazón sin edad, una vida inspirada por el amor y guiada por la inteligencia.',
@@ -74,30 +72,41 @@ var items = Array(
 	'En la medida en que pasan los años nos damos cuenta lo hermosa que es la vida y de lo que nos enriquecemos con el pasar de los años.',
 	'No hay porque esconderse, solo es un año mas. Feliz Cumpleaños.',
 	'Un año más, un año menos: lo importante es que lo gocemos.',
+	'No pienses que te amo, porque en realidad te amo mas de lo que piensas.',
+	'Alguna vez fuiste a la luna... Porque yo voy a marte siempre....',
+	'Si en la noche no puedes dormir, no cuentes estrellas...cuenta conmigo.',
+	'No desayuno por pensar en ti, No almuerzo por pensar en ti, No ceno por pensar en ti, No duermo porque tengo hambre.',
+	'Felicidad es una palabra de 9 letras, la mia resume en 2...TU, talvez 3... ISA',
+	'De todas las flores, la más bonita es la rosa y de todas las mujeres, tú eres la más hermosa.',
+	'¿Sabes por qué los ángeles están enfadado conmigo? Por que en vez de soñar con ellos sueño contigo.',
+	'Mi dulce paraíso, acúname en tu tierno amor con tu corazón de miel, elévame al cielo con tus besos, mi angel bella.',
+	'Si pudiera elegir un poder, elegiria el poder de estar siempre contigo.',
+	'Empezaste como amiga, terminaste como amor, poco a poco así has robado todo mi corazón.',
+	'Cuando mires las estrellas acuérdate de mí, por que en cada una de ellas hay un beso para ti.',
+	'Dormire temprano, para soñar mas tiempo contigo mi cabeza de bombon.',
+	'La vida es mia, pero el corazon... es tuyo. La sonrisa es mia, pero el motivo... eres tu.',
+	'El pasado fue mio, mi presente es tuyo, y el futuro es nuestro.',
+	'Ayer te soñé, hoy te conocí, mañana te querré, jamas te olvidaré.',
+	'Necesito un diccionario, porque desde que te ví me he quedado sin palabras.',
+	'Tu sonrisa es mi vida, no me dejes morir.',
+	'En mi corazon solo hay sitío para tí, tanto te amo, que ya no hay sitío ni para mí.',
+	'Es verdad que necesito el corazon para vivir, pero más te necesito a tí para hacerlo latir.',
+	'El amor no se mira, se siente, y aún más cuando tú estás junto a mi.',
 	'Hoy celebramos que eres un año mayor...pero no te preocupes que estás mucho mejor.'
 );
 function getMsgs(){
-	var item = items[Math.floor(Math.random()*items.length)];
-	$("#mismensajes").html(item);
+	$('#mismensajes').fadeOut('slow',function() {
+		var item = items[Math.floor(Math.random()*items.length)];
+		$('#mismensajes').html(item).fadeIn('slow');
+	});
 }
 
 $(document).ready(function(){
-    // when firework text is changed, update the tinyurl
-    $('#firetext').blur(function(){
-    });
-	
 	getMsgs();
 	$('#mismensajes').click(function(){
 		getMsgs();
     });
 
-    // focus on the input box
-    try {
-        $('#firetext').get(0).focus();
-    } catch (ignore) {
-    }
-
-    // reload the page when it's resized
     var resizeTimer = null; 
     $(window).bind('resize', function() { 
         if (document.all) return;
@@ -108,13 +117,7 @@ $(document).ready(function(){
     // finally, all is ready, so kick off the firework display
     var params = location.search;
     var message = "";
-    if (params.match('msg=')) {
-        // change the message if set in the page url
-        message = unescape(params.split('?msg=')[1]);
-        $('#firetext').val(message);
-    }
     FireworkDisplay.launchText();
-
 });
 
 FireworkDisplay = {
@@ -125,15 +128,15 @@ FireworkDisplay = {
     DISPERSION_WIDTH : 1,
     DISPERSION_HEIGHT : 2,
     FIREWORK_PAYLOAD : 10,
-    FRAGMENT_SPREAD : 8,
+    FRAGMENT_SPREAD : 5,
     TEXT_LINE_HEIGHT : 55,
     FIREWORK_READY : 0,
     FIREWORK_LAUNCHED : 1,
     FIREWORK_EXPLODED : 4,
     FIREWORK_FRAGMENT : 7,
     canvas : 0,
-    canvaswidth : 0,
-    canvasheight : 0,
+    canvaswidth : 320,
+    canvasheight : 240,
     ctx : 0,
     blockPointer : 0,
     fireworks : [],
@@ -187,7 +190,7 @@ FireworkDisplay = {
             $('#cv').hide();
 			$('#form').fadeIn('slow');
         });
-        var text = $('#firetext').val();
+        var text = 'ISABEL';
 
         var totalHeightOffset = 0;
         var totalWidthOffset = new Array();
@@ -204,7 +207,7 @@ FireworkDisplay = {
                     var chararr = FONT_FIREWORK[text.charAt(i)][j];
                     maxWidthOffset = Math.max(maxWidthOffset, chararr[0]);
                 }
-                totalWidthOffset[widthCounter] += maxWidthOffset + 40;
+                totalWidthOffset[widthCounter] += maxWidthOffset + 20;
             }
         }
 
@@ -226,7 +229,7 @@ FireworkDisplay = {
                     this.allBlocks[this.allBlocks.length] = [(chararr[0]+offsetLeft)-(totalWidthOffset[heightOffsetCount]/2), chararr[1]-offsetTop];
                     maxWidthOffset = Math.max(maxWidthOffset, chararr[0]);
                 }
-                offsetLeft += maxWidthOffset+40;  //plus character spacing
+                offsetLeft += maxWidthOffset+20;  //plus character spacing
             }
         }
         this.gameloop = setInterval("FireworkDisplay.updateDisplay()", 1000/this.FRAME_RATE);
@@ -314,7 +317,8 @@ Firework = function(index) {
     this.index = index;
     this.dx = 0;
     this.dy = 0;
-    this.x = FireworkDisplay.canvaswidth/2;
+    //this.x = FireworkDisplay.canvaswidth/8;
+    this.x = 160;
     this.y = 0;
     this.status = FireworkDisplay.FIREWORK_READY;
     this.brightness = 255;
