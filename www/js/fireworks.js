@@ -117,7 +117,9 @@ $(document).ready(function(){
     // finally, all is ready, so kick off the firework display
     var params = location.search;
     var message = "";
+	var audio = document.getElementById('a1');
     FireworkDisplay.launchText();
+	audio.play();
 	vibrate();
 });
 
@@ -133,8 +135,8 @@ FireworkDisplay = {
     TEXT_LINE_HEIGHT : 55,
     FIREWORK_READY : 0,
     FIREWORK_LAUNCHED : 1,
-    FIREWORK_EXPLODED : 4,
-    FIREWORK_FRAGMENT : 7,
+    FIREWORK_EXPLODED : 3,
+    FIREWORK_FRAGMENT : 2,
     canvas : 0,
     canvaswidth : 320,
     canvasheight : 240,
@@ -191,7 +193,7 @@ FireworkDisplay = {
             $('#cv').hide();
 			$('#form').fadeIn('slow');
         });
-        var text = 'ISABEL';
+        var text = 'ISABELITA';
 
         var totalHeightOffset = 0;
         var totalWidthOffset = new Array();
@@ -319,7 +321,7 @@ Firework = function(index) {
     this.dx = 0;
     this.dy = 0;
     //this.x = FireworkDisplay.canvaswidth/8;
-    this.x = 160;
+    this.x = 200;
     this.y = 0;
     this.status = FireworkDisplay.FIREWORK_READY;
     this.brightness = 255;
