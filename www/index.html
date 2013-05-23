@@ -3,27 +3,35 @@
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
     <title>Feliz cumple Isabelita</title>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
-   <script type="text/javascript" charset="utf-8">
+	<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+	<script type="text/javascript" charset="utf-8">
 		document.addEventListener("deviceready", onDeviceReady, false);
 		function onDeviceReady() {
+			vibrate();
+			playaudio();
 		}
 		function vibrate() {
 			navigator.notification.vibrate(7000);
 		}
-   </script>
+		var my_media = null;
+		function playAudio() {
+            if (my_media == null) {
+                my_media = new Media('konayuki.mp3', onSuccess, onError);
+            }
+            my_media.play();
+        }
+		function exitFromApp(){
+			navigator.device.exitApp();
+		}
+	</script>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <!--[if lt IE 9]><script src="canvas/excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="js/fireworks.js"></script>
     <link type="text/css" href="css/fireworks.css" rel="stylesheet">
 </head>
 <body>
     <h1>JavaScript Fireworks</h1>
-	<audio id="a1" autoplay loop>
-		<source src="konayuki.ogg">
-		<source src="konayuki.mp3">
-	</audio>
     <canvas id="cv" width="400" height="240" style="position:absolute;"></canvas>
+	<a href="#" id="salir" onclick="exitFromApp();">SALIR</a>
     <div style="display: block;" id="form">
 		<div id="mismensajes"></div>
     </div>

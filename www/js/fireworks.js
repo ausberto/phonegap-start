@@ -114,13 +114,9 @@ $(document).ready(function(){
         resizeTimer = setTimeout("location.reload()", 100); 
     }); 
 
-    // finally, all is ready, so kick off the firework display
     var params = location.search;
     var message = "";
-	var audio = document.getElementById('a1');
     FireworkDisplay.launchText();
-	audio.play();
-	vibrate();
 });
 
 FireworkDisplay = {
