@@ -8,19 +8,26 @@ body {
 	background:url(../images/lapaz2.jpg) repeat-x;
 }
 /*html, body { overflow: hidden; }*/
-#salir{
-	margin-top:250px;
+#botones{
+	margin-top:230px;
 	float:left;
+}
+#salir,#sonido{
 	color:#fff;
 	background-color:#000;
 	padding:7px;
 	font-weight:bold;
+	width:35px;
+	height:15px;
+	display:inline-block;
+	margin-bottom:5px;
 }
+
 #form {
    position:relative;
    margin-left:auto;
    margin-right:auto;
-   width:340px;
+   width:370px;
    padding:16px;
    border:#3C75BA;
    text-align:center;
@@ -29,7 +36,7 @@ body {
 #mismensajes{
 	font-family: 'Codystar', cursive;
 	font-weight: bold;
-	font-size:24px;
+	font-size:26px;
 	color:#fff;
 	cursor:pointer;
 }
