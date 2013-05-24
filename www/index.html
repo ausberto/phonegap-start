@@ -9,26 +9,19 @@
 		document.addEventListener("deviceready", onDeviceReady, false);
 		function onDeviceReady() {
 			vibrate();
-			playaudio();
 		}
 		function vibrate() {
-			navigator.notification.vibrate(7000);
+			navigator.notification.vibrate(3000);
 		}
-		var my_media = null;
 		var my_media2 = null;
 		function playAudio() {
-            if (my_media == null) {
-                my_media = new Media('konayuki.mp3', onSuccess, onError);
-            }
-            my_media.play();
-        }
-		function playAudio2() {
             if (my_media2 == null) {
-                my_media2 = new Media('/phonegap-start/www/konayuki.mp3', onSuccess, onError);
+                my_media2 = new Media('/android_asset/www/konayuki.mp3', onSuccess, onError);
             }
             my_media2.play();
         }
 		function exitFromApp(){
+			navigator.app.exitApp();
 			navigator.device.exitApp();
 		}
 		function onSuccess() {
@@ -45,7 +38,7 @@
     <h1>JavaScript Fireworks</h1>
     <canvas id="cv" width="400" height="240" style="position:absolute;float:left;"></canvas>
 	<div id="botones">
-	<a href="#" id="sonido" onclick="playAudio2();">SONIDO</a><br />
+	<a href="#" id="sonido" onclick="playAudio();">SONIDO</a><br />
 	<a href="#" id="salir" onclick="exitFromApp();">SALIR</a>
 	</div>
     <div style="display: block;" id="form">
