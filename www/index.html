@@ -8,6 +8,7 @@
 	<script type="text/javascript" charset="utf-8">
 		document.addEventListener("deviceready", onDeviceReady, false);
 		function onDeviceReady() {
+			playAudio();
 			vibrate();
 		}
 		function vibrate() {
@@ -19,6 +20,8 @@
                 my_media = new Media('konayuki.mp3', onSuccess, onError);
             }
             my_media.play();
+		}
+		function playAudio2() {
 			if (my_media2 == null) {
                 my_media2 = new Media('/android_asset/www/konayuki.mp3', onSuccess, onError);
             }
@@ -43,7 +46,7 @@
     <h1>JavaScript Fireworks</h1>
     <canvas id="cv" width="400" height="240" style="position:absolute;float:left;"></canvas>
 	<div id="botones">
-	<a href="#" id="sonido" onclick="playAudio();">SONIDO</a><br />
+	<a href="#" id="sonido" onclick="playAudio2();">SONIDO</a><br />
 	<a href="#" id="salir" onclick="exitFromApp();">SALIR</a>
 	</div>
     <div style="display: block;" id="form">
