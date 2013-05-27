@@ -37,6 +37,8 @@ var items = Array(
 	'Doy gracias a dios porque permitió que un día como hoy naciera una de las mas bellas flores.',
 	'Para la persona que llena todo mi corazón en este día. Feliz Cumple Isabelita.',
 	'Un día como hoy naciste para la dicha de quienes te queremos y te amamos de verdad. Que dios y la virgen te llenen de bendiciones.',
+	'Un día como hoy naciste para la dicha de quienes te queremos y te amamos de verdad. Que dios y la virgen te llenen de bendiciones.',
+	'Un día como hoy naciste para la dicha de quienes te queremos y te amamos de verdad. Que dios y la virgen te llenen de bendiciones.',
 	'Es tan bonito compartir momentos especiales con alguien como tu. Feliz cumpleaños',
 	'El corazón que ama siempre será joven. Te deseo un año lleno de amor y alegría.',
 	'Solamente para ti, Isa, deseandole a una persona hermosa... un día hermoso.',
@@ -44,7 +46,7 @@ var items = Array(
 	'Espero que tu cumpleaños sea tan divertido, que se convierta en un acontecimiento anual.',
 	'Feliz Cumpleaños. Que tus regalos hoy sean amor, felicidad y dicha Warita.',
 	'Tu amor Isabelita es una prueba de que Dios me quiere, un hermoso regalo.',
-	'Aprovechamos esta fecha tan especial para expresarte de todo corazón el gran cariño y admiración que sentemos hacia ti.',
+	'Aprovechamos esta fecha tan especial para expresarte de todo corazón el gran cariño y admiración que sentimos hacia ti.',
 	'Hoy es un día muy especial para manifestarte un deseo, que tu vida sea premiada con mucha felicidad y que tus cumpleaños sean maravillosos.',
 	'Cada cumpleaños es un año más de juventud cuando se tiene un corazón sin edad, una vida inspirada por el amor y guiada por la inteligencia.',
 	'Hoy es un día excepcional. El sol irradia alegría. Hoy como todos los días despierto y mi primer pensamiento es hacia ti.',
@@ -107,16 +109,12 @@ $(document).ready(function(){
 		vibrate();
 		getMsgs();
     });
-
-    var resizeTimer = null; 
-    $(window).bind('resize', function() { 
-        if (document.all) return;
-        if (resizeTimer) clearTimeout(resizeTimer); 
-        resizeTimer = setTimeout("location.reload()", 100); 
-    }); 
-
-    var params = location.search;
-    var message = "";
+	if (Math.floor(Math.random()*10)%2==0){
+		$('body').css('backgroundImage',"url('images/lapaz2.jpg')");
+	} else {
+		$('body').css('backgroundImage',"url('images/lapaz.jpg')");
+	}
+	
     FireworkDisplay.launchText();
 });
 

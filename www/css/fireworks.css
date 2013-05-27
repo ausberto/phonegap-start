@@ -3,9 +3,8 @@
 	src: url('Codystar-Regular.ttf');
 }
 body {
-    background: #080705;
     font-size:62.5%;
-	background:url(../images/lapaz2.jpg) repeat-x;
+	background-image:url(../images/lapaz.jpg) repeat-x;
 }
 /*html, body { overflow: hidden; }*/
 #botones{
