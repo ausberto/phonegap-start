@@ -27,11 +27,11 @@
  */
 
 var items = Array(
-	'Cada instante contigo bien vivido hace que cada Ayer sea un sueño de felicidad y cada Mañana una aventura. Me gustaría estar contigo cada décima de segundo.',
+	'Cada instante contigo bien vivido hace que cada Ayer sea un sueño de felicidad y cada Mañana una aventura. Quisiera estar contigo cada décima de segundo.',
 	'Soy afortunado de compartir días de mi vida contigo y cuando se cumple un año más tomo conciencia de lo que te amo.',
 	'Cada año que paso contigo me sabe a solo unos minutos, me gustaría vivir eternamente, respirar tu aire, sentir tu pulso y tu corazón mil siglos más.',
 	'Te deseo que tu día de cumpleaños me tengas tan presente como te he tenido en mi corazón cada segundo, cada instante.',
-	'Un amor que continua abriéndose paso en la dificultades se alimenta para toda la vida.. ¡Feliz cumpleaños!',
+	'Un amor que continua abriéndose paso en la dificultades se alimenta para toda la vida.. ¡Feliz cumpleaños Isabelita!',
 	'Mi amor hoy es un día muy especial para agradecerle a dios por la fortuna de tenerte conmigo.',
 	'Con cada año que pasa, te haces más hermosa, y mi amor se hace mas grande.',
 	'Doy gracias a dios porque permitió que un día como hoy naciera una de las mas bellas flores.',
@@ -42,8 +42,8 @@ var items = Array(
 	'Solamente para ti, Isa, deseandole a una persona hermosa... un día hermoso.',
 	'Pensando en ti el día de tu cumpleaños, y deseándote mucha felicidad.',
 	'Espero que tu cumpleaños sea tan divertido, que se convierta en un acontecimiento anual.',
-	'Feliz Cumpleaños. Que tus regalos hoy sean amor y felicidad.',
-	'Tu amor Isabelita es una prueba de que Dios me quiere.',
+	'Feliz Cumpleaños. Que tus regalos hoy sean amor, felicidad y dicha Warita.',
+	'Tu amor Isabelita es una prueba de que Dios me quiere, un hermoso regalo.',
 	'Aprovechamos esta fecha tan especial para expresarte de todo corazón el gran cariño y admiración que sentemos hacia ti.',
 	'Hoy es un día muy especial para manifestarte un deseo, que tu vida sea premiada con mucha felicidad y que tus cumpleaños sean maravillosos.',
 	'Cada cumpleaños es un año más de juventud cuando se tiene un corazón sin edad, una vida inspirada por el amor y guiada por la inteligencia.',
@@ -51,14 +51,14 @@ var items = Array(
 	'Que el jardín de tu vida este siempre lleno de bellas flores en semejanza a tus invaluables virtudes.',
 	'Los cumpleaños van y vienen. Pero las personas inolvidables como tu permanecen en el corazón para siempre.',
 	'La mas hermosa de todas las flores empieza a florecer sus pétalos llenos de vida, llenos de amor. Son el símbolo de una linda mujer que cumple años hoy.',
-	'Que este día sea el comienzo de otro año de felicidad.',
+	'Que este día sea el comienzo de otro año lleno de dicha y felicidad.',
 	'No hay regalo que pueda superar mi deuda eterna contigo, aunque vivieras mil años.',
 	'Recuerda que la vida es bella, y que no interesa cuántos cumplas lo que realmente interesa es el cariño y el entusiasmo que colocas a esta fecha tan especial.',
 	'Tu amor es para mi tan importante que no quiero dejar de compartirlo mil años más contigo...',
 	'La distancia hace que el silencio no hable; con palabras que viven con tu voz y con el eco de tu risa.',
 	'En tu cumpleaños quiero recordar contigo momentos especiales, momentos llenos de alegría, es decir, cada segundo a tu lado.',
 	'Hay un día especial en el año, en que nos acordamos lo grandioso que es compartir contigo.',
-	'Que este año sea una perla mas en el collar de tus aventuras y logros.',
+	'Que este año sea una perla mas en el collar de tus aventuras y logros Isa...',
 	'La mas hermosa de todas las rosas empieza a florecer, sus pétalos llenos de vida, llenos de amor. Son el símbolo de una linda mujer que cumple años hoy.',
 	'Para la mujercita mas bella y dulce de este mundo, rogando a dios le conceda muchos años mas de vida.',
 	'Que las sanas ilusiones de hoy se conviertan en realidad y que toda la dicha del mundo sea tuya hoy.',
@@ -88,10 +88,10 @@ var items = Array(
 	'El pasado fue mio, mi presente es tuyo, y el futuro es nuestro.',
 	'Ayer te soñé, hoy te conocí, mañana te querré, jamas te olvidaré.',
 	'Necesito un diccionario, porque desde que te ví me he quedado sin palabras.',
-	'Tu sonrisa es mi vida, no me dejes morir.',
 	'En mi corazon solo hay sitío para tí, tanto te amo, que ya no hay sitío ni para mí.',
 	'Es verdad que necesito el corazon para vivir, pero más te necesito a tí para hacerlo latir.',
 	'El amor no se mira, se siente, y aún más cuando tú estás junto a mi.',
+	'La vida decide quienes llegan a tu vida, pero solo tu decides quienes se quedan...',
 	'Hoy celebramos que eres un año mayor...pero no te preocupes que estás mucho mejor.'
 );
 function getMsgs(){
@@ -104,6 +104,7 @@ function getMsgs(){
 $(document).ready(function(){
 	getMsgs();
 	$('#mismensajes').click(function(){
+		vibrate();
 		getMsgs();
     });
 
@@ -126,7 +127,7 @@ FireworkDisplay = {
     FIREWORK_SPEED : 3,
     DISPERSION_WIDTH : 1,
     DISPERSION_HEIGHT : 2,
-    FIREWORK_PAYLOAD : 10,
+    FIREWORK_PAYLOAD : 7,
     FRAGMENT_SPREAD : 5,
     TEXT_LINE_HEIGHT : 55,
     FIREWORK_READY : 0,
