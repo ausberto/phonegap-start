@@ -115,6 +115,13 @@ $(document).ready(function(){
 		$('body').css('backgroundImage',"url('images/lapaz.jpg')");
 	}
 	
+	var resizeTimer = null; 
+    $(window).bind('resize', function() { 
+        if (document.all) return;
+        if (resizeTimer) clearTimeout(resizeTimer); 
+        resizeTimer = setTimeout("location.reload()", 100); 
+    });
+	
     FireworkDisplay.launchText();
 });
 
